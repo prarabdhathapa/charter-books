@@ -27,7 +27,7 @@ public class ReservationController {
         );
 
         if (reservation == null) {
-            return ResponseEntity.badRequest().build(); // e.g., item not available
+            return ResponseEntity.badRequest().build(); // item not available
         }
 
         return ResponseEntity.ok(reservation);
@@ -45,4 +45,5 @@ public class ReservationController {
         reservationService.cancelReservation(id);
         return ResponseEntity.ok().build();
     }
+
 }
